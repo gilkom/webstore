@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/packt/webstore/domain/repository/impl/InMemoryCustomerRepository.java=UTF-8
 encoding//src/main/webapp/WEB-INF/views/products.jsp=UTF-8

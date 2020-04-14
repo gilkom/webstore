@@ -21,7 +21,7 @@ public InMemoryCustomerRepository() {
 	Customer klientDrugi = new Customer("C1235", "Anna Wisniewska","Warszawa, Twarda 12/84");
 	klientDrugi.setNoOfOrdersMade(12);
 	
-	Customer klientTrzeci = new Customer("C1236", "Tomasz Koterski", "£owicz, Warszawska 3/123");
+	Customer klientTrzeci = new Customer("C1236", "Tomasz Koterski", "Â£owicz, Warszawska 3/123");
 	klientTrzeci.setNoOfOrdersMade(5);
 	
 	listOfCustomers.add(klientPierwszy);
