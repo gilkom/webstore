@@ -5,12 +5,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 import com.packt.webstore.domain.Customer;
-import com.packt.webstore.domain.Product;
+
 import com.packt.webstore.domain.repository.CustomerRepository;
 
 
 @Repository
-public class InMemoryCustomerRepository {
+public class InMemoryCustomerRepository implements CustomerRepository{
 
 private List<Customer> listOfCustomers = new ArrayList<Customer>();
 	
