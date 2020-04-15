@@ -18,5 +18,8 @@ public class CustomerServiceImpl implements CustomerService{
 	public List<Customer> getAllCustomers(){
 		return customerRepository.getAllCustomers();
 	}
+	public Customer getCustomerById(String customerId) {
+		return customerRepository.getCustomerById(customerId);
+	}
 
 }
