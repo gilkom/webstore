@@ -13,6 +13,10 @@ public class HomeController {
 		model.addAttribute("tagline", "Wyjatkowym i jedynym sklepie internetowym");
 		return "welcome";
 	}
+	@RequestMapping("/welcome/greeting")
+	public String greeting() {
+		return "welcome";
+	}
 
 }
    
