@@ -3,7 +3,6 @@ import java.math.BigDecimal;
 
 import org.springframework.web.multipart.MultipartFile;
 
-
 public class Product {
 	private String productId;
 	private String name;
@@ -123,6 +122,7 @@ public class Product {
 	public String toString() {
 		return "Produkt [productId=" + productId + ", nazwa=" + name + "]";
 	}
+
 
 	
 	

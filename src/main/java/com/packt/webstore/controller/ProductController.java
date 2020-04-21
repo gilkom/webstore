@@ -83,13 +83,14 @@ public class ProductController {
 				throw new RuntimeException("Niepowodzenie podczas próby zapisu obrazka produktu", e);
 			}
 		}
+		
 		productService.addProduct(newProduct);
 		return "redirect:/products";
 	}
 	@InitBinder
 	public void initialiseBinder(WebDataBinder binder) {
 		binder.setDisallowedFields("unitsInOrder", "discontinued");
-		binder.setAllowedFields("productId", "name", "unitPrice", "description", "manufacturer", "category", "unitsInStock", "productImage", "condition");;
+		binder.setAllowedFields("productId", "name", "unitPrice", "description", "manufacturer", "category", "unitsInStock", "productImage", "condition");
 	}
 
 }
