@@ -29,10 +29,15 @@ import com.packt.webstore.domain.Product;
 import com.packt.webstore.exception.NoProductFoundUnderCategoryException;
 import com.packt.webstore.exception.ProductNotFoundException;
 import com.packt.webstore.service.ProductService;
+import com.packt.webstore.validator.ProductValidator;
+import com.packt.webstore.validator.UnitsInStockValidator;
 
 @Controller
 @RequestMapping("/products")
 public class ProductController {
+	
+	@Autowired
+	private ProductValidator productValidator;
 	
 	@Autowired
 	private ProductService productService;
@@ -103,6 +108,7 @@ public class ProductController {
 	public void initialiseBinder(WebDataBinder binder) {
 		binder.setDisallowedFields("unitsInOrder", "discontinued");
 		binder.setAllowedFields("productId", "name", "unitPrice", "description", "manufacturer", "category", "unitsInStock", "productImage", "condition","language");
+		binder.setValidator(productValidator);
 	}
 	@ExceptionHandler(ProductNotFoundException.class)
 	public ModelAndView handleError(HttpServletRequest req, ProductNotFoundException exception) {
