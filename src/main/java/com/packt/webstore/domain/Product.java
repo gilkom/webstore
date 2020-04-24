@@ -9,9 +9,11 @@ import javax.validation.constraints.Size;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.packt.webstore.validator.ProductId;
+
 public class Product {
 	@Pattern(regexp="P[1-9]+", message="{Pattern.Product.productId.validation}")
-
+	@ProductId
 	private String productId;
 	
 	@Size(min=4, max=50, message="{Size.Product.name.validation}")
